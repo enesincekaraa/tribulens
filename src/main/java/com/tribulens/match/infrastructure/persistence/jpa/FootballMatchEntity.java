@@ -3,8 +3,12 @@ package com.tribulens.match.infrastructure.persistence.jpa;
 import com.tribulens.match.domain.FootballMatch;
 import com.tribulens.match.domain.MatchDataSource;
 import com.tribulens.match.domain.MatchStatus;
-import jakarta.persistence.*;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.time.Instant;
 import java.util.Objects;
