@@ -14,15 +14,16 @@ import java.util.UUID;
 @Component
 public class MatchCatalogBootstrap implements ApplicationRunner {
     private final MatchRepository matchRepository;
+
     public MatchCatalogBootstrap(MatchRepository matchRepository) {
         this.matchRepository = matchRepository;
     }
 
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
 
-        Instant fetchedAt=Instant.parse("2026-09-12T12:00:00Z");
+        Instant fetchedAt = Instant.parse("2026-09-12T12:00:00Z");
 
         matchRepository.save(
                 new FootballMatch(

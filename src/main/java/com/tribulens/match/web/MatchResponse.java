@@ -33,7 +33,7 @@ public record MatchResponse(
     }
 
 
-    private record SourceResponse(
+    public record SourceResponse(
             String provider,
             String externalMatchId,
             Instant fetchedAt
