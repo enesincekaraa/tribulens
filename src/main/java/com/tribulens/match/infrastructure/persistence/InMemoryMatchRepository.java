@@ -2,14 +2,12 @@ package com.tribulens.match.infrastructure.persistence;
 
 import com.tribulens.match.application.port.MatchRepository;
 import com.tribulens.match.domain.FootballMatch;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Repository
 public class InMemoryMatchRepository implements MatchRepository {
 
     private final ConcurrentHashMap<UUID, FootballMatch> matches = new ConcurrentHashMap<UUID, FootballMatch>();
